@@ -134,8 +134,7 @@ namespace Tests
             answer.Sorting();
             for (int i = 0; i < size; i++)
             {
-                Assert.AreEqual(Math.Round(comparer[i].Length(), 2),
-                    Math.Round(answer.Rectangles[i].Length(), 2));
+                Assert.AreEqual(comparer[i].Length(), answer.Rectangles[i].Length());
             }
         }
         [TestMethod()]
@@ -246,7 +245,7 @@ namespace Tests
             answer.Sorting();
             for (int i = 0; i < size - 1; i++)
             {
-                Assert.IsTrue(answer.Figures[i].Cost() <= answer.Figures[i + 1].Cost());
+                Assert.IsTrue(answer.Embrasures[i].Cost() <= answer.Embrasures[i + 1].Cost());
             }
         }
         [TestMethod()]
